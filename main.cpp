@@ -137,9 +137,7 @@ void plotSpherical(IVideoDriver *driver, float t, vector3df offset, float spaceR
 
 
 for(int a = 1; a < 4; ++a){
-        int a18 = 0; //a*a*a...?
-int a86 = 0
-    if((43*215*3*a18 - 5*215*5*a86 + 5*43*12*a)%46225 == 0) cout << a << endl;
+
 }
     bool md = false;
     int totalAtoms = 8*8*8; //if 3dCube, this value should be the cube of an integer.
