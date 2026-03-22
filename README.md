@@ -1,13 +1,13 @@
-# 3D Molecular Dynamics Simulator
+ # 3D Molecular Dynamics Simulator
 
 A real-time, 3D atomic and molecular dynamics simulator written in C++ using the [Irrlicht Engine](http://irrlicht.sourceforge.net/). This project visualizes particle interactions by simulating physical forces such as Lennard-Jones potentials, electrostatic repulsion/attraction, and complex bonded interactions (elastic, angular, and torsional forces) based on AMBER-like force fields.
 
 ##  Project Structure
 
 * atom.h / atom.cpp
-  Defines the `atom` class, which holds physical properties (mass, charge, speed, acceleration) and structural data (bonds, neighbors). It also includes extensive static lookup tables for atomic masses, radii, bond lengths, and visual textures for all elements.
+  Defines the "atom" class, which holds physical properties (mass, charge, speed, acceleration) and structural data (bonds, neighbors). It also includes extensive static lookup tables for atomic masses, radii, bond lengths, and visual textures for all elements.
 * materialSys.h / materialSys.cpp
-  The core physics engine. It maintains the system of atoms (`materialSys`) and calculates intermolecular forces. It includes implementations for energy minimization (`steepestDescent`) and molecular dynamics (`amberDynamics`). 
+  The core physics engine. It maintains the system of atoms ("materialSys") and calculates intermolecular forces. It includes implementations for energy minimization ("steepestDescent") and molecular dynamics ("amberDynamics"). 
 * main.cpp
   The application entry point. Initializes the Irrlicht 3D device, sets up the environment (lighting, skybox), handles user input via an event receiver, and runs the main simulation loop. It also includes experimental visualization functions for spatial density matrices and spherical harmonics.
 * utils.h / utils.cpp
@@ -54,4 +54,4 @@ The simulator applies several forces to update atomic acceleration and velocity:
 3.  **Elastic (Bonds):** Harmonic oscillator springs pulling bonded atoms to their equilibrium distance.
 4.  **Angular:** Restoring forces for 3-body angles (e.g., keeping $110^\circ$ for sp3 carbons).
 5.  **Torsional:** Dihedral angle forces for 4-body interactions.
-6.  **Hydrogen Bonds:** Specialized $12-10$ potential for specific electronegative interactions.
+6.  **Hydrogen Bonds:** Specialized 12-10 potential for specific electronegative interactions.
